@@ -37,7 +37,11 @@ public class Canvas extends JFrame {
             angler=(int)((angle * 180)/Math.PI);
             x = (int) (xc + (r*cos(angler)));
             y = (int) (yc + (r*sin(angler)));
-            buffer.setRGB(x, y, a.getRGB());
+            pixel(x, y, a);
         }
+    }
+
+    private void pixel(int x, int y, Color a) {
+        buffer.setRGB(x, y, a.getRGB());
     }
 }
